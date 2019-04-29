@@ -1,0 +1,48 @@
+# define macro
+snippet define "#define ···" b
+#define ${1:macro} ${2:action}
+endsnippet
+
+# main function
+snippet main "int main(int argc, char *argv[])" b
+int main(int argc, char *argv[])
+{
+	${VISUAL}$0
+	return 0;
+}
+endsnippet
+
+# function
+snippet function "ret-type func-name(para)" b
+${1:ret-type} ${2:func-name}(${3:para})
+{
+	${4:content}
+}
+endsnippet
+
+# for loop
+snippet for "for(;;)" b
+for(${2:i} = 0; $2 < ${1:count}; ${3:++$2})
+{
+	${VISUAL}$0
+}
+endsnippet
+
+snippet fori "for int loop (fori)" b
+for (${4:int} ${2:i} = 0; $2 < ${1:count}; ${3:++$2})
+{
+	${VISUAL}$0
+}
+endsnippet
+
+# if-else
+snippet ifelse "if···else···" b
+if(${1:condition}) 
+{
+	${2:action1}
+}
+else
+{
+	${3:action2}
+}
+endsnippet
